@@ -71,7 +71,7 @@ jobs:
           ${{ github.workspace }}/sl analyze --app shiftleft-java-demo \
             --strict --wait \
             --tag branch=${{ github.head_ref || steps.extract_branch.outputs.branch }} \
-            --vcs-prefix-correction "io/shiftleft=src/main/java/" \
+            --vcs-prefix-correction "*=src/main/java" \
             --java --cpg \
             target/hello-shiftleft-0.0.1.jar
         env:
