@@ -95,6 +95,7 @@ jobs:
 
       - name: Validate Build Rules
         run: |
+          ls -R && \
           ${{ github.workspace }}/sl check-analysis --app shiftleft-java-demo \          
               --branch "${{ github.head_ref || steps.extract_branch.outputs.branch }}" \
               --v2 \
